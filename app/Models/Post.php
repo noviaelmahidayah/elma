@@ -45,12 +45,7 @@ class Post extends Model implements HasMedia
         $this->addMediaCollection('images')->singleFile();
     }
 
-    // app/Models/Post.php
-// Di app/Models/Post.php
-public function scopePublished($query)
-{
-    return $query->where('published_at', true);
-}
+    
 
 
 }
