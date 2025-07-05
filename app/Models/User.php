@@ -63,10 +63,9 @@ class User extends Authenticatable implements HasMedia, HasAvatar
              ??(new UiAvatarsProvider())->get($this);
     }
 
-    // Di dalam User.php
-    public function posts()
+    public function canAccessPanel(\Filament\Panel $panel): bool
     {
-        return $this->hasMany(Post::class);
+        return true;
     }
 
 }
